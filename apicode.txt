@@ -1,0 +1,28 @@
+  try { 
+      const response = await axios.post(
+        `https://api.airtable.com/v0/appdNFLZAYfxzxosx/nothing`,
+        { fields: data },
+        {
+          headers: {
+            Authorization: `Bearer patQntGqjDkxdlulD.0c16c807127b5e1704b17a071c92722777d78b085f7068f1e2121e65ce7b7347`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log("Data sent to Airtable:", response.data);
+      alert("Data sent to Airtable:", response.data);
+      reset();  
+    
+    } catch (error) {
+      alert("Error sending data to Airtable:", error);
+    }
+  };
+
+  Submit data to Airtable
+        const response = await axios.post(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_NAME}`, data, {
+          headers: {
+            'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
+            'Content-Type': 'application/json'
+          }
+        
+        console.log(response.data);
